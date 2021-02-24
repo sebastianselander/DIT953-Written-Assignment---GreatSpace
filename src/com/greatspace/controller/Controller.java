@@ -63,6 +63,7 @@ public enum Controller implements IStrategy {
             }
         }
     },
+
     PLAYER_2 {
         @Override
         public void keyPressed(Player player, KeyEvent key)

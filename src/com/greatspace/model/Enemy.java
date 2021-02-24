@@ -10,28 +10,22 @@ public class Enemy extends GameObject {
     private int x;
     private int y;
 
-    private static final int VELOCIDADE = 2;
+    private static final int VELOCITY = 2;
 
-    public Enemy()
-    {
-    }
+    public Enemy() {}
 
     public static int GeneratePosX()
     {
         return GeneratePosX(100);
     }
 
-    public static int GeneratePosX(int nb)
-    {
-
+    public static int GeneratePosX(int nb) {
         int aax = 456 + (int) (Math.random() * 16 * nb);
         return aax;
     }
 
-    public static int GeneratePosY()
-    {
+    public static int GeneratePosY() {
         int aay = 10 + (int) (Math.random() * 320);
-
         return aay;
     }
 
@@ -46,7 +40,7 @@ public class Enemy extends GameObject {
             this.x = GeneratePosX(nbEnemy);
             this.y = GeneratePosY();
         } else {
-            this.x -= VELOCIDADE;
+            this.x -= VELOCITY;
         }
     }
 
@@ -72,7 +66,7 @@ public class Enemy extends GameObject {
 
     public Rectangle getBounds()
     {
-        return new Rectangle(x, y, getLargura(), getAltura());
+        return new Rectangle(x, y, getWidth(), getHeight());
     }
 
 }

@@ -101,14 +101,14 @@ public class Player extends GameObject {
 
     public void fire() {
         Bullet mis = (Bullet) missel.clone();
-        mis.setX(x + getLargura());
-        mis.setY(y + getAltura() / 2);
+        mis.setX(x + getWidth());
+        mis.setY(y + getHeight() / 2);
 
         this.bullets.add(mis);
     }
 
     public Rectangle getBounds() {
-        return new Rectangle(x, y, getLargura(), getAltura());
+        return new Rectangle(x, y, getWidth(), getHeight());
     }
 
     public Controller getControle() {

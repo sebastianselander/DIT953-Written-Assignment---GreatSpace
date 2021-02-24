@@ -305,7 +305,6 @@ public class Game extends JPanel implements ActionListener {
 
     public void findCollision()
     {
-
         Rectangle p1Bounds = playeOne.getBounds();
         Rectangle p2Bounds = playerTwo.getBounds();
         Rectangle formaInimigo;

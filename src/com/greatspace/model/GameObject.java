@@ -11,9 +11,9 @@ public abstract class GameObject implements Cloneable {
     private int height;
     private int width;
 
-    private boolean visivel;
+    private boolean visible;
 
-    public int getAltura()
+    public int getHeight()
     {
         return height;
     }
@@ -23,14 +23,12 @@ public abstract class GameObject implements Cloneable {
         this.height = a;
     }
 
-    public int getLargura()
+    public int getWidth()
     {
         return width;
     }
 
-    public void setWidth(int l)
-    {
-
+    public void setWidth(int l) {
         this.width = l;
     }
 
@@ -46,26 +44,23 @@ public abstract class GameObject implements Cloneable {
 
     public boolean isVisible()
     {
-        return visivel;
+        return visible;
     }
 
     public void setVisibility(boolean v)
     {
-        this.visivel = v;
+        this.visible = v;
     }
 
     @Override
-    public Object clone()
-    {
+    public Object clone() {
         Object clone = null;
-
         try {
             clone = super.clone();
 
         } catch (CloneNotSupportedException e) {
             e.printStackTrace();
         }
-
         return clone;
     }
 }

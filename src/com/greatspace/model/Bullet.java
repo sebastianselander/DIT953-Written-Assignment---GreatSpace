@@ -59,7 +59,7 @@ public class Bullet extends GameObject {
 
     public Rectangle getBounds()
     {
-        return new Rectangle(x, y, getLargura(), getAltura());
+        return new Rectangle(x, y, getWidth(), getHeight());
     }
 
 }
